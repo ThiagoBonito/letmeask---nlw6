@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --body-bg: #29292e;
+    --body-color: #fff;
+    --body-theme: #835afd;
+    --body-color-hover: #835afd;
+}
+
+.dark-mode:root{
+    --body-bg: #fff;
+    --body-color: #29292e;
+    --body-theme: #835afd;
+    --body-color-hover: #835afd;
+}
+body,input,button,textarea{
+    font: 400 16px 'Roboto', sans-serif;
+}

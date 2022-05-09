@@ -1,0 +1,215 @@
+:root{
+    --body-bg: #29292e;
+    --body-color: #fff;
+    --body-theme: #835afd;
+    --body-color-hover: #835afd;
+}
+
+.dark-mode:root{
+    --body-bg: #fff;
+    --body-color: #29292e;
+    --body-theme: #835afd;
+    --body-color-hover: #835afd;
+    --body-color-input: #5c7074;
+}
+#page-auth{
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+    background: var(--body-color);
+
+    aside{
+        flex: 7;
+
+
+        background: var(--body-theme);
+        color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        padding: 7.5rem 5rem;
+
+
+        img{
+            max-width: 20rem;
+        }
+
+        strong{
+            font: 700 2rem 'Poppins', sans-serif;
+            line-height: 2.6rem;
+            margin-top: 1rem;
+        }
+
+        p{
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin-top: 1rem;
+            color: #fff;
+        }
+    }
+
+    main{
+        flex: 8;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        background: var(--body-color);
+        
+        .main-content{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 20rem;
+            align-items: stretch;
+            text-align: center;
+            
+
+            > img{
+                align-self: center;
+            }
+            h2{
+                font-size: 1.5rem;
+                margin: 4rem 0 1.5rem;
+                font-family: 'Poppins', sans-serif;
+                color: var(--body-bg);
+            }
+            form{
+                input{
+                height: 3rem;
+                border-radius: 0.5rem;
+                padding: 0 1rem;
+                background: var(--body-color);
+                border: 1px solid #a8a8b3;
+                color: var(--body-color-input);
+                }
+                button{
+                    margin-top: 1rem;
+
+                }
+                button,input{
+                    width: 100% ;
+                }
+            }
+            p{
+                font-size: 0.9rem;
+                color: #737380;
+                margin-top: 1rem;
+
+
+                a{
+                    color: #e559f9;
+                }
+            }
+        }
+        .create-room{
+            margin-top: 4rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            background: #ea4335;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: 0;
+            transition: filter 0.2s;
+
+            img{
+                margin-right: 0.5rem;
+            }
+
+            &:hover{
+                filter: brightness(0.9);
+            }
+        }
+        .separator{
+            font-size: 0.9rem;
+            color: #a8a8b3;
+            margin: 32px 0;
+            display: flex;
+            align-items: center;
+
+
+            &::before{
+                content: '';
+                flex: 1;
+                height: 1px;
+                background: #a8a8b3;
+                margin-right: 1rem;
+            }
+            &::after{
+                content: '';
+                flex: 1;
+                height: 1px;
+                background: #a8a8b3;
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+.dark{
+    span{
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+        color: var(--body-bg);
+    }
+
+}
+@media (max-width: 800px) {
+    #page-auth {
+        aside {
+            flex: 6;
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #page-auth {
+        flex-direction: column;
+        align-items: center;
+        max-height: 100%;
+        height: 100%;
+        aside {
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            flex: 0;
+            img {
+                max-width: 9rem;
+                margin: 0 auto;
+            }
+
+            strong {
+                margin-top: 2rem;
+                padding: 0 1.8rem;
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        main {
+            flex: 0;
+            padding: 1.8rem 0.7rem;
+        }
+
+        .main-content {
+            width: 17.5rem;
+
+            p {
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
